@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="25dp">
+
+<TextView
+    android:id="@+id/today_txt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Today's Task"
+    android:textColor="@color/black"
+    android:fontFamily="@font/poppin_semibold"
+    android:textSize="25dp"
+    android:layout_marginTop="50dp"
+
+    />
+    <TextView
+        android:id="@+id/current_date_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/today_txt"
+        android:text="Wednesday, 11 May"
+        android:fontFamily="@font/poppin_regular"
+        android:textSize="15dp"
+        android:textColor="@color/grey"
+       />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/today_txt"
+        android:background="@drawable/newtask_btn_shape"
+        android:fontFamily="@font/poppin_semibold"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="70dp"
+        android:padding="10dp"
+        android:text="+ New Task "
+        android:textAllCaps="false"
+        android:textColor="@color/main"
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:id="@+id/nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/current_date_txt"
+        android:layout_marginBottom="-60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
+            android:fontFamily="@font/poppin_regular"
+            android:textSize="15dp"
+            android:textColor="@color/main"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open"
+            android:layout_marginLeft="35dp"
+            android:fontFamily="@font/poppin_regular"
+            android:textSize="15dp"
+            android:textColor="@color/main"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Closed"
+            android:layout_marginLeft="35dp"
+            android:fontFamily="@font/poppin_regular"
+            android:textSize="15dp"
+            android:textColor="@color/main"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Archeive"
+            android:layout_marginLeft="35dp"
+            android:fontFamily="@font/poppin_regular"
+            android:textSize="15dp"
+            android:textColor="@color/main"/>
+    </LinearLayout>
+    <view class="androidx.appcompat.app.AlertController$RecycleListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nav"
+        android:layout_marginTop="100dp"/>
+
+</RelativeLayout>
